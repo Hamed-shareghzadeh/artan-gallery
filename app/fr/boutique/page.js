@@ -1,15 +1,8 @@
-import ShopShell from '../../../components/ShopShell';
-
-export const metadata = {
-  title: 'Boutique'
-};
-
-export default function BoutiqueFRPage() {
+export default function BoutiqueFR() {
   return (
-    <ShopShell
-      title="Boutique"
-      description="Explorez la prochaine collection Artan et préparez-vous pour les éditions limitées."
-      ctaLabel="Rejoindre la liste d'attente"
-    />
+    <main className="compare">
+      <h2>Boutique — FR</h2>
+      <p>Bientôt : catégories, filtres, collections sélectionnées.</p>
+    </main>
   );
 }
