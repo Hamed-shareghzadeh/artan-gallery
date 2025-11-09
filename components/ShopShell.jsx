@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Link from "next/link";
 
 export default function ShopShell({
   heading = "Shop",
@@ -12,6 +13,8 @@ export default function ShopShell({
     { value: "price_desc", label: "Price: High to Low" }
   ],
   resetLabel = "Reset",
+  addLabel = "Add to cart",
+  locale = "en", // NEW: "tr" | "en" | "fr"
   filters = {
     categoriesLabel: "Categories",
     categories: [],
@@ -23,7 +26,7 @@ export default function ShopShell({
     sizes: [],
     priceLabel: "Max Price"
   },
-  items = []
+  items = [] // each item must have {id, slug, title, price, ...}
 }) {
   const [q, setQ] = useState("");
   const [sort, setSort] = useState("pop");
@@ -73,6 +76,12 @@ export default function ShopShell({
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const pageItems = filtered.slice((page-1)*pageSize, page*pageSize);
+
+  const productHref = (slug) => {
+    if (!slug) return "#";
+    // /tr/p/[slug], /en/p/[slug], /fr/p/[slug]
+    return `/${locale}/p/${slug}`;
+  };
 
   return (
     <div className="shop-wrap">
@@ -157,16 +166,19 @@ export default function ShopShell({
         <div className="grid">
           {pageItems.map(p => (
             <article className="cardP" key={p.id}>
-              <div className="thumb"><span>{p.thumb || "Artan Gallery"}</span></div>
+              <Link href={productHref(p.slug)} className="thumb"><span>{p.thumb || "Artan Gallery"}</span></Link>
               <div className="cardBody">
-                <div className="cardRow"><div className="title">{p.title}</div><div className="price">{p.price} ₺</div></div>
+                <div className="cardRow">
+                  <Link href={productHref(p.slug)} className="title">{p.title}</Link>
+                  <div className="price">{p.price} ₺</div>
+                </div>
                 <div className="tags">
                   {(p.cats||[]).map(t=> <span key={"c"+t} className="tag">{t}</span>)}
                   {(p.styles||[]).map(t=> <span key={"s"+t} className="tag">{t}</span>)}
                   {(p.colors||[]).map(t=> <span key={"k"+t} className="tag">{t}</span>)}
                   {(p.sizes||[]).map(t=> <span key={"z"+t} className="tag">{t}</span>)}
                 </div>
-                <button className="add">Add to cart</button>
+                <button className="add">{addLabel}</button>
               </div>
             </article>
           ))}
