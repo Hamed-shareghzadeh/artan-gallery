@@ -1,15 +1,8 @@
-import ShopShell from '../../../components/ShopShell';
-
-export const metadata = {
-  title: 'Mağaza'
-};
-
-export default function ShopTRPage() {
+export default function ShopTR() {
   return (
-    <ShopShell
-      title="Mağaza"
-      description="Yeni Artan koleksiyonunu keşfedin ve sınırlı sayıdaki sürümlere ilk siz ulaşın."
-      ctaLabel="Bekleme listesine katıl"
-    />
+    <main className="compare">
+      <h2>Shop — TR</h2>
+      <p>Mağaza yakında: kategoriler, filtreler, koleksiyonlar.</p>
+    </main>
   );
 }
