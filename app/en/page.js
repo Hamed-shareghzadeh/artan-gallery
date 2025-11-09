@@ -1,5 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+import CompareBlock from "../../components/CompareBlock";
+
+const GSAP_CDN_SRC = "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js";
+const GSAP_SCRIPT_ATTR = "data-artan-gsap";
 
 export default function PageEN() {
   useEffect(() => {
@@ -111,13 +116,21 @@ export default function PageEN() {
           <p className="hero-tagline">Art is not just seen — it’s felt.</p>
 
           <div className="cta">
-            <a className="btn" href="#">Shop</a>
-            <a className="btn" href="#">AI Room Styler</a>
-            <a className="btn" href="#">Interior Projects</a>
+            <a className="btn" href="#">
+              Shop
+            </a>
+            <a className="btn" href="#">
+              AI Room Styler
+            </a>
+            <a className="btn" href="#">
+              Interior Projects
+            </a>
           </div>
         </section>
 
-        <div className="scroll-cue"><span>scroll</span></div>
+        <div className="scroll-cue">
+          <span>scroll</span>
+        </div>
       </section>
 
       <CompareBlock

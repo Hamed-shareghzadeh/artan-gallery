@@ -1,4 +1,11 @@
 "use client";
+
+import { useEffect } from "react";
+import CompareBlock from "../../components/CompareBlock";
+
+const GSAP_CDN_SRC = "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js";
+const GSAP_SCRIPT_ATTR = "data-artan-gsap";
+
 export default function PageTR() {
   useEffect(() => {
     let ctx;
@@ -109,11 +116,30 @@ export default function PageTR() {
           <p className="hero-tagline">Sanat sadece görülmez — hissedilir.</p>
 
           <div className="cta">
-            <a className="btn" href="/tr/shop">Shop</a>
-            <a className="btn" href="/tr/ai">AI Room Styler</a>
-            <a className="btn" href="/tr/projects">Interior Projects</a>
+            <a className="btn" href="/tr/shop">
+              Shop
+            </a>
+            <a className="btn" href="/tr/ai">
+              AI Room Styler
+            </a>
+            <a className="btn" href="/tr/projects">
+              Interior Projects
+            </a>
           </div>
         </section>
+
+        <div className="scroll-cue">
+          <span>kaydır</span>
+        </div>
+      </section>
+
+      <CompareBlock
+        title="Artan farkını hissedin"
+        leftLabel="Artan Gallery kadifesi"
+        rightLabel="Sıradan döşemelik kumaşlar"
+        leftText="El seçimi İtalyan dokumaları, zengin çift taramalı hav ve yıllarca canlı kalan ışıl ışıl bir renk skalası."
+        rightText="Sığ havlı, hızla solan tonlara ve derinlik ile yumuşaklıktan yoksun seri üretim sentetikler."
+      />
     </main>
   );
 }

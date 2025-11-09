@@ -1,6 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+import CompareBlock from "../../components/CompareBlock";
 
+const GSAP_CDN_SRC = "https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js";
+const GSAP_SCRIPT_ATTR = "data-artan-gsap";
 
 export default function PageFR() {
   useEffect(() => {
@@ -111,7 +115,31 @@ export default function PageFR() {
           </h1>
           <p className="hero-tagline">L’art ne se voit pas seulement — il se ressent.</p>
 
-<
+          <div className="cta">
+            <a className="btn" href="#">
+              Boutique
+            </a>
+            <a className="btn" href="#">
+              Styler de pièce IA
+            </a>
+            <a className="btn" href="#">
+              Projets d’intérieur
+            </a>
+          </div>
+        </section>
+
+        <div className="scroll-cue">
+          <span>défiler</span>
+        </div>
+      </section>
+
+      <CompareBlock
+        title="Sentez la différence Artan"
+        leftLabel="Velours Artan Gallery"
+        rightLabel="Tissus d’ameublement ordinaires"
+        leftText="Tissages italiens sélectionnés à la main, velours doublement brossé et palette lumineuse pensée pour rester éclatante des années durant."
+        rightText="Synthétiques produits en masse, à faible densité, qui ternissent vite et manquent de profondeur comme de douceur."
+      />
     </main>
   );
 }
