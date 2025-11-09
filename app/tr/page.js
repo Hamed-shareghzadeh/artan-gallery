@@ -1,10 +1,4 @@
 "use client";
-
-import { useEffect } from "react";
-
-const GSAP_CDN_SRC = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js";
-const GSAP_SCRIPT_ATTR = "data-gsap-loader";
-
 export default function PageTR() {
   useEffect(() => {
     let ctx;
@@ -104,31 +98,22 @@ export default function PageTR() {
   }, []);
 
   return (
-    <main className="hero hero--light">
-      <div className="velvet-bg" aria-hidden />
+    <main>
+      <section className="hero hero--light">
+        <div className="velvet-bg" aria-hidden />
 
-      <section className="hero-content">
-        <h1 className="hero-title">
-          İtalyan kadifesi, Türkiye’de ilk kez — Artan Gallery.
-        </h1>
-        <p className="hero-tagline">Sanat sadece görülmez — hissedilir.</p>
+        <section className="hero-content">
+          <h1 className="hero-title">
+            İtalyan kadifesi, Türkiye’de ilk kez — Artan Gallery.
+          </h1>
+          <p className="hero-tagline">Sanat sadece görülmez — hissedilir.</p>
 
-        <div className="cta">
-          <a className="btn" href="/tr/shop">
-            Shop
-          </a>
-          <a className="btn" href="/tr/ai">
-            AI Room Styler
-          </a>
-          <a className="btn" href="/tr/projects">
-            Interior Projects
-          </a>
-        </div>
-      </section>
-
-      <div className="scroll-cue">
-        <span>scroll</span>
-      </div>
+          <div className="cta">
+            <a className="btn" href="/tr/shop">Shop</a>
+            <a className="btn" href="/tr/ai">AI Room Styler</a>
+            <a className="btn" href="/tr/projects">Interior Projects</a>
+          </div>
+        </section>
     </main>
   );
 }

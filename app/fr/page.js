@@ -1,9 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
 
-const GSAP_CDN_SRC = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js";
-const GSAP_SCRIPT_ATTR = "data-gsap-loader";
 
 export default function PageFR() {
   useEffect(() => {
@@ -104,33 +101,17 @@ export default function PageFR() {
   }, []);
 
   return (
-    <main className="hero hero--light">
-      <div className="velvet-bg" aria-hidden />
+    <main>
+      <section className="hero hero--light">
+        <div className="velvet-bg" aria-hidden />
 
-      <section className="hero-content">
-        <h1 className="hero-title">
-          Velours italien — première en Turquie par Artan Gallery.
-        </h1>
-        <p className="hero-tagline">
-          L’art ne se voit pas seulement — il se ressent.
-        </p>
+        <section className="hero-content">
+          <h1 className="hero-title">
+            Velours italien — première en Turquie par Artan Gallery.
+          </h1>
+          <p className="hero-tagline">L’art ne se voit pas seulement — il se ressent.</p>
 
-        <div className="cta">
-          <a className="btn" href="#">
-            Boutique
-          </a>
-          <a className="btn" href="#">
-            AI Room Styler
-          </a>
-          <a className="btn" href="#">
-            Projets d’intérieur
-          </a>
-        </div>
-      </section>
-
-      <div className="scroll-cue">
-        <span>défiler</span>
-      </div>
+<
     </main>
   );
 }
