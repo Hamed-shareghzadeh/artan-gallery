@@ -1,15 +1,15 @@
 import ShopShell from '../../../components/ShopShell';
 
-const FILTER_OPTIONS = ['Color', 'Collection', 'Availability'];
+export const metadata = {
+  title: 'Shop'
+};
 
 export default function ShopENPage() {
   return (
     <ShopShell
-      title="Artan Shop"
-      filterHeading="Filters"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Product"
-      comingSoonLabel="Coming soon."
+      title="Shop"
+      description="Discover the upcoming Artan collection and be the first to access limited releases."
+      ctaLabel="Join the waitlist"
     />
   );
 }

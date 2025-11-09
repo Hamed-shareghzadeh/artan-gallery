@@ -1,15 +1,15 @@
 import ShopShell from '../../../components/ShopShell';
 
-const FILTER_OPTIONS = ['Renk', 'Koleksiyon', 'Fiyat Aralığı'];
+export const metadata = {
+  title: 'Mağaza'
+};
 
 export default function ShopTRPage() {
   return (
     <ShopShell
-      title="Artan Mağaza"
-      filterHeading="Filtreler"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Ürün"
-      comingSoonLabel="Yakında satışta."
+      title="Mağaza"
+      description="Yeni Artan koleksiyonunu keşfedin ve sınırlı sayıdaki sürümlere ilk siz ulaşın."
+      ctaLabel="Bekleme listesine katıl"
     />
   );
 }
