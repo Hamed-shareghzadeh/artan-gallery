@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Artan Gallery — Italian Velvet in Türkiye',
-  description: 'Modern, minimal, luxurious wall art. Italian velvet — first time in Türkiye by Artan Gallery.',
+  description: 'Modern, minimal, luxurious wall art.',
   openGraph: {
     title: 'Artan Gallery — Italian Velvet in Türkiye',
     description: 'Modern, minimal, luxurious wall art.',
@@ -14,6 +14,5 @@ export const metadata = {
 };
 
 export default function LayoutEN({ children }) {
-  // Do not render <html> here; root layout already does.
   return children;
 }
