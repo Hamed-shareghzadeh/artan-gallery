@@ -1,11 +1,18 @@
-export default function FRBoutiquePage() {
+import ShopShell from "../../../components/ShopShell";
+
+export const metadata = {
+  title: "Boutique",
+  description: "Explorez la prochaine collection Artan et préparez-vous pour les éditions limitées.",
+};
+
+export default function BoutiqueFRPage() {
   return (
-    <section className="content-section" aria-labelledby="fr-boutique-title">
-      <h1 id="fr-boutique-title">Boutique Velours</h1>
-      <p>
-        Bientôt, découvrez et commandez en ligne la collection emblématique de velours
-        italien d’Artan Gallery.
-      </p>
-    </section>
+    <ShopShell
+      title="Boutique"
+      description="Explorez la prochaine collection Artan et préparez-vous pour les éditions limitées."
+      ctaLabel="Rejoindre la liste d'attente"
+      productLabel="Édition"
+      comingSoonLabel="Bientôt disponible"
+    />
   );
 }

@@ -1,11 +1,18 @@
-export default function TRShopPage() {
+import ShopShell from "../../../components/ShopShell";
+
+export const metadata = {
+  title: "Mağaza",
+  description: "Yeni Artan koleksiyonunu keşfedin ve sınırlı sayıdaki sürümlere ilk siz ulaşın.",
+};
+
+export default function ShopTRPage() {
   return (
-    <section className="content-section" aria-labelledby="tr-shop-title">
-      <h1 id="tr-shop-title">Kadife Koleksiyonu</h1>
-      <p>
-        Yakında Artan Gallery’nin seçkin kadife baskı koleksiyonunu çevrim içi olarak
-        keşfedebileceksiniz.
-      </p>
-    </section>
+    <ShopShell
+      title="Mağaza"
+      description="Yeni Artan koleksiyonunu keşfedin ve sınırlı sayıdaki sürümlere ilk siz ulaşın."
+      ctaLabel="Bekleme listesine katıl"
+      productLabel="Edisyon"
+      comingSoonLabel="Çok yakında"
+    />
   );
 }

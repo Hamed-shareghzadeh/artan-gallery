@@ -1,11 +1,18 @@
-export default function ENShopPage() {
+import ShopShell from "../../../components/ShopShell";
+
+export const metadata = {
+  title: "Shop",
+  description: "Discover the upcoming Artan collection and be the first to access limited releases.",
+};
+
+export default function ShopENPage() {
   return (
-    <section className="content-section" aria-labelledby="en-shop-title">
-      <h1 id="en-shop-title">Velvet Collection</h1>
-      <p>
-        Soon you will be able to browse and order Artan Gallery’s signature Italian velvet
-        prints online.
-      </p>
-    </section>
+    <ShopShell
+      title="Shop"
+      description="Discover the upcoming Artan collection and be the first to access limited releases."
+      ctaLabel="Join the waitlist"
+      productLabel="Edition"
+      comingSoonLabel="Coming soon"
+    />
   );
 }
