@@ -30,7 +30,7 @@ export default function LayoutEN({ children }) {
         <a className="skip-link" href="#main">Skip to main content</a>
         <header className="site-header page-shell">
           <div className="brand">
-            <a href="/tr">Artan Gallery</a>
+            <a href="/en">Artan Gallery</a>
           </div>
           <nav className="site-nav" aria-label="Global navigation">
             <ul className="language-switch" aria-label="Language chooser">
