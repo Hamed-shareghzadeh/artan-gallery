@@ -1,11 +1,11 @@
-export default function IntelligenceArtificiellePage() {
+export default function FRAIPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Intelligence artificielle</h2>
+    <section className="content-section" aria-labelledby="fr-ai-title">
+      <h1 id="fr-ai-title">Expérience IA Velours</h1>
       <p>
-        Découvrez notre vision de l'intelligence artificielle et son influence
-        sur l'avenir de l'art numérique.
+        Visualisez des œuvres en velours italien dans votre espace grâce à un stylisme
+        assisté par IA. Ouverture prochaine du service.
       </p>
-    </main>
+    </section>
   );
 }

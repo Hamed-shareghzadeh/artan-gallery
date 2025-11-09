@@ -1,11 +1,11 @@
-export default function YapayZekaSayfasi() {
+export default function TRAIPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Yapay Zeka</h2>
+    <section className="content-section" aria-labelledby="tr-ai-title">
+      <h1 id="tr-ai-title">Kadife AI Deneyimi</h1>
       <p>
-        Dijital sanatın geleceğini nasıl şekillendirdiğine dair yapay zeka
-        üzerine düşüncelerimizi keşfedin.
+        Mekânınız için kadife sanat seçeneklerini yapay zekâ ile önizleyin. Hizmet çok
+        yakında çevrim içi olacak.
       </p>
-    </main>
+    </section>
   );
 }

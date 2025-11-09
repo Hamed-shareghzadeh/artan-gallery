@@ -1,15 +1,11 @@
-import ShopShell from '../../../components/ShopShell';
-
-const FILTER_OPTIONS = ['Renk', 'Koleksiyon', 'Fiyat Aralığı'];
-
-export default function ShopTRPage() {
+export default function TRShopPage() {
   return (
-    <ShopShell
-      title="Artan Mağaza"
-      filterHeading="Filtreler"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Ürün"
-      comingSoonLabel="Yakında satışta."
-    />
+    <section className="content-section" aria-labelledby="tr-shop-title">
+      <h1 id="tr-shop-title">Kadife Koleksiyonu</h1>
+      <p>
+        Yakında Artan Gallery’nin seçkin kadife baskı koleksiyonunu çevrim içi olarak
+        keşfedebileceksiniz.
+      </p>
+    </section>
   );
 }

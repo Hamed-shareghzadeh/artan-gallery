@@ -1,15 +1,11 @@
-import ShopShell from '../../../components/ShopShell';
-
-const FILTER_OPTIONS = ['Couleur', 'Collection', 'Disponibilité'];
-
-export default function BoutiqueFRPage() {
+export default function FRBoutiquePage() {
   return (
-    <ShopShell
-      title="Boutique Artan"
-      filterHeading="Filtres"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Produit"
-      comingSoonLabel="Bientôt disponible."
-    />
+    <section className="content-section" aria-labelledby="fr-boutique-title">
+      <h1 id="fr-boutique-title">Boutique Velours</h1>
+      <p>
+        Bientôt, découvrez et commandez en ligne la collection emblématique de velours
+        italien d’Artan Gallery.
+      </p>
+    </section>
   );
 }

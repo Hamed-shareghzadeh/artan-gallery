@@ -1,15 +1,11 @@
-import ShopShell from '../../../components/ShopShell';
-
-const FILTER_OPTIONS = ['Color', 'Collection', 'Availability'];
-
-export default function ShopENPage() {
+export default function ENShopPage() {
   return (
-    <ShopShell
-      title="Artan Shop"
-      filterHeading="Filters"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Product"
-      comingSoonLabel="Coming soon."
-    />
+    <section className="content-section" aria-labelledby="en-shop-title">
+      <h1 id="en-shop-title">Velvet Collection</h1>
+      <p>
+        Soon you will be able to browse and order Artan Gallery’s signature Italian velvet
+        prints online.
+      </p>
+    </section>
   );
 }

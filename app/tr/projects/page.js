@@ -1,11 +1,11 @@
-export default function ProjelerSayfasi() {
+export default function TRProjectsPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Projeler</h2>
+    <section className="content-section" aria-labelledby="tr-projects-title">
+      <h1 id="tr-projects-title">İç Mimari Projeler</h1>
       <p>
-        Artan Gallery deneyimini genişleten yaklaşan ve devam eden projelerimizi
-        keşfedin.
+        Artan Gallery, seçkin otel ve rezidanslarda kadife sanat kurulumları sağlar. Proje
+        referansları yakında paylaşılacak.
       </p>
-    </main>
+    </section>
   );
 }

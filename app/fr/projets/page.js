@@ -1,11 +1,11 @@
-export default function ProjetsPage() {
+export default function FRProjetsPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Projets</h2>
+    <section className="content-section" aria-labelledby="fr-projets-title">
+      <h1 id="fr-projets-title">Projets Intérieurs</h1>
       <p>
-        Parcourez nos projets en cours et à venir qui enrichissent l'expérience
-        Artan Gallery.
+        Artan Gallery collabore avec des designers d’hôtels et de résidences pour créer
+        des murs signature en velours. Études de cas à venir.
       </p>
-    </main>
+    </section>
   );
 }

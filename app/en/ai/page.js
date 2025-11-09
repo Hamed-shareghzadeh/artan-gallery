@@ -1,11 +1,11 @@
-export default function AIPage() {
+export default function ENAIPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">AI</h2>
+    <section className="content-section" aria-labelledby="en-ai-title">
+      <h1 id="en-ai-title">Velvet AI Experience</h1>
       <p>
-        Explore our thoughts on artificial intelligence and how it shapes the
-        future of digital art.
+        Visualise Italian velvet artworks inside your space with guided AI styling. The
+        digital experience is launching soon.
       </p>
-    </main>
+    </section>
   );
 }

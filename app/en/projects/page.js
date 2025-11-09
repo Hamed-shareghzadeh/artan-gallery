@@ -1,11 +1,11 @@
-export default function ProjectsPage() {
+export default function ENProjectsPage() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+    <section className="content-section" aria-labelledby="en-projects-title">
+      <h1 id="en-projects-title">Interior Projects</h1>
       <p>
-        Discover our upcoming and ongoing projects that expand the Artan Gallery
-        experience.
+        Artan Gallery partners with hospitality and residential designers to deliver
+        velvet-led statement walls. Case studies are coming soon.
       </p>
-    </main>
+    </section>
   );
 }
