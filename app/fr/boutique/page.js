@@ -1,15 +1,15 @@
 import ShopShell from '../../../components/ShopShell';
 
-const FILTER_OPTIONS = ['Couleur', 'Collection', 'Disponibilité'];
+export const metadata = {
+  title: 'Boutique'
+};
 
 export default function BoutiqueFRPage() {
   return (
     <ShopShell
-      title="Boutique Artan"
-      filterHeading="Filtres"
-      filterOptions={FILTER_OPTIONS}
-      productLabel="Produit"
-      comingSoonLabel="Bientôt disponible."
+      title="Boutique"
+      description="Explorez la prochaine collection Artan et préparez-vous pour les éditions limitées."
+      ctaLabel="Rejoindre la liste d'attente"
     />
   );
 }

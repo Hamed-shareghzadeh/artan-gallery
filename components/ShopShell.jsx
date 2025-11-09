@@ -1,43 +1,83 @@
-const DEFAULT_FILTERS = Object.freeze([]);
+'use client';
 
-export default function ShopShell({
-  title,
-  filterHeading,
-  filterOptions = DEFAULT_FILTERS,
-  productLabel,
-  comingSoonLabel
-}) {
-  const products = Array.from({ length: 6 }, (_, index) => `${productLabel} ${index + 1}`);
+const shellStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '60vh',
+  padding: '4rem 1.5rem',
+  background: '#f8f7f4'
+};
 
+const panelStyle = {
+  maxWidth: '32rem',
+  width: '100%',
+  textAlign: 'center',
+  backgroundColor: '#fff',
+  padding: '3rem 2.5rem',
+  borderRadius: '1.5rem',
+  boxShadow: '0 20px 45px rgba(15, 23, 42, 0.12)'
+};
+
+const headingStyle = {
+  fontSize: '2.25rem',
+  fontWeight: 600,
+  marginBottom: '1rem',
+  color: '#0f172a'
+};
+
+const descriptionStyle = {
+  fontSize: '1.05rem',
+  lineHeight: 1.7,
+  marginBottom: '2rem',
+  color: '#475569'
+};
+
+const buttonStyle = {
+  appearance: 'none',
+  border: 'none',
+  borderRadius: '999px',
+  padding: '0.9rem 2.75rem',
+  fontSize: '1rem',
+  fontWeight: 600,
+  background: '#0f172a',
+  color: '#fff',
+  cursor: 'pointer',
+  transition: 'transform 150ms ease, box-shadow 150ms ease'
+};
+
+const buttonHoverStyle = {
+  transform: 'translateY(-2px)',
+  boxShadow: '0 10px 25px rgba(15, 23, 42, 0.25)'
+};
+
+export default function ShopShell({ title, description, ctaLabel }) {
   return (
-    <main className="shop-shell">
-      <header className="shop-shell__header">
-        <h1>{title}</h1>
-      </header>
-
-      <div className="shop-shell__content">
-        <aside className="shop-shell__filters">
-          <h2>{filterHeading}</h2>
-          <form className="shop-shell__filter-group">
-            {filterOptions.map((option) => (
-              <label key={option} className="shop-shell__filter-option">
-                <input type="checkbox" />
-                <span>{option}</span>
-              </label>
-            ))}
-          </form>
-        </aside>
-
-        <section className="shop-shell__grid" aria-label={title}>
-          {products.map((product) => (
-            <article key={product} className="shop-shell__card">
-              <div className="shop-shell__card-image" aria-hidden="true" />
-              <h3>{product}</h3>
-              <p>{comingSoonLabel}</p>
-            </article>
-          ))}
-        </section>
+    <section style={shellStyle}>
+      <div
+        style={panelStyle}
+        onMouseEnter={(event) => {
+          Object.assign(event.currentTarget.querySelector('button').style, buttonHoverStyle);
+        }}
+        onMouseLeave={(event) => {
+          const button = event.currentTarget.querySelector('button');
+          button.style.transform = button.style.boxShadow = '';
+        }}
+      >
+        <h1 style={headingStyle}>{title}</h1>
+        <p style={descriptionStyle}>{description}</p>
+        <button
+          type="button"
+          style={buttonStyle}
+          onFocus={(event) => Object.assign(event.currentTarget.style, buttonHoverStyle)}
+          onBlur={(event) => {
+            event.currentTarget.style.transform = '';
+            event.currentTarget.style.boxShadow = '';
+          }}
+        >
+          {ctaLabel}
+        </button>
       </div>
-    </main>
+    </section>
   );
 }
