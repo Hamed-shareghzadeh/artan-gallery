@@ -74,62 +74,57 @@ html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe
 }
 
 .compare {
-  padding: 72px 24px 96px;
-  background: #f6f6f6;
+  padding: 64px 24px;
+  background: #f7f7f7;
 }
 
-.compare-inner {
+.compare__inner {
   max-width: 960px;
   margin: 0 auto;
   display: grid;
-  gap: 28px;
+  gap: 32px;
 }
 
-.compare-title {
+.compare__title {
   margin: 0;
   font-size: clamp(24px, 4vw, 34px);
   text-align: center;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
-.compare-grid {
+.compare__grid {
   display: grid;
-  gap: 20px;
+  gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.compare-panel {
+.compare__panel {
   background: #fff;
-  border-radius: 20px;
-  padding: 28px;
-  border: 1px solid rgba(17, 17, 17, 0.05);
-  box-shadow: 0 18px 45px rgba(17, 17, 17, 0.08);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  gap: 12px;
 }
 
-.compare-panel--muted {
-  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.05);
-  opacity: 0.85;
-}
-
-.compare-label {
-  margin: 0 0 12px;
-  font-size: 18px;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-}
-
-.compare-copy {
+.compare__label {
   margin: 0;
-  line-height: 1.5;
-  color: rgba(17, 17, 17, 0.82);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.compare__text {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, 0.72);
 }
 
 @media (max-width: 600px) {
   .compare {
-    padding: 56px 18px 72px;
+    padding: 48px 16px;
   }
 
-  .compare-panel {
-    padding: 24px;
+  .compare__grid {
+    gap: 16px;
   }
 }
