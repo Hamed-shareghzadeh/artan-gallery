@@ -1,6 +1,18 @@
 "use client";
+import Link from "next/link";
 
 export default function PageFR() {
+  const items = [
+    { slug:"velvet-noir",   title:"Velvet Noir",    price:3490, tags:["Art mural","Minimal"] },
+    { slug:"emerald-touch", title:"Emerald Touch",  price:2990, tags:["Affiche","Moderne"] },
+    { slug:"ivory-muse",    title:"Ivory Muse",     price:2790, tags:["Art mural","Classique"] },
+    { slug:"azure-drift",   title:"Azure Drift",    price:3190, tags:["Ensemble","Abstrait"] },
+    { slug:"golden-frame",  title:"Golden Frame",   price:3890, tags:["Accessoire","Minimal"] },
+    { slug:"velvet-duo",    title:"Velvet Duo",     price:4590, tags:["Ensemble","Moderne"] },
+  ];
+  const rowA = [...items, ...items];
+  const rowB = [...items.slice().reverse(), ...items.slice().reverse()];
+
   return (
     <main>
       <section className="hero" aria-label="Hero">
@@ -9,14 +21,52 @@ export default function PageFR() {
           <h1>Velours italien — première en Turquie par Artan Gallery.</h1>
           <p>L’art ne se voit pas seulement — il se ressent.</p>
           <div className="cta">
-            <a className="btn" href="#boutique">Boutique</a>
-            <a className="btn" href="#ia">Styliste de pièce IA</a>
-            <a className="btn" href="#projets">Projets d’intérieur</a>
+            <Link className="btn" href="/fr/boutique">Boutique</Link>
+            <Link className="btn" href="/fr/ai">AI Room Styler</Link>
+            <Link className="btn" href="/fr/projets">Projets d’intérieur</Link>
           </div>
         </div>
       </section>
 
-      <section id="boutique" className="section" aria-labelledby="cmp-title-fr">
+      <section className="marquee-wrap" aria-label="À la une">
+        <h2 className="marquee-head">À la une</h2>
+
+        <div className="marquee-row">
+          {rowA.map((p, i) => (
+            <Link href={`/fr/p/${p.slug}`} className="mcard" key={`a-${i}`}>
+              <div className="mthumb"><span>{p.title}</span></div>
+              <div className="mbody">
+                <div className="mrow">
+                  <div className="mtitle">{p.title}</div>
+                  <div className="mprice">{p.price} ₺</div>
+                </div>
+                <div className="mtags">
+                  {p.tags.map(t => <span className="mtag" key={t}>{t}</span>)}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="marquee-row rtl" style={{marginTop:12}}>
+          {rowB.map((p, i) => (
+            <Link href={`/fr/p/${p.slug}`} className="mcard" key={`b-${i}`}>
+              <div className="mthumb"><span>{p.title}</span></div>
+              <div className="mbody">
+                <div className="mrow">
+                  <div className="mtitle">{p.title}</div>
+                  <div className="mprice">{p.price} ₺</div>
+                </div>
+                <div className="mtags">
+                  {p.tags.map(t => <span className="mtag" key={t}>{t}</span>)}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="cmp-title-fr">
         <h2 id="cmp-title-fr">Velours vs Toile (Canvas)</h2>
         <div className="grid2">
           <div className="card">
@@ -28,20 +78,6 @@ export default function PageFR() {
             <p>Trame classique de toile; rendu plus mat. Sensation tactile limitée.</p>
           </div>
         </div>
-      </section>
-
-      <section id="ia" className="section" aria-label="AI Room Styler">
-        <h2>Styliste de pièce IA</h2>
-        <p style={{textAlign:'center',opacity:.85,maxWidth:780,margin:'8px auto 0'}}>
-          Bientôt : téléchargez la photo de votre pièce et recevez des suggestions de style/cadre.
-        </p>
-      </section>
-
-      <section id="projets" className="section" aria-label="Projets d’intérieur">
-        <h2>Projets d’intérieur</h2>
-        <p style={{textAlign:'center',opacity:.85,maxWidth:780,margin:'8px auto 0'}}>
-          Bientôt : projets résidentiels/hôteliers/commerciaux et étapes de collaboration.
-        </p>
       </section>
     </main>
   );
