@@ -1,11 +1,8 @@
-export default function ProjelerSayfasi() {
+export default function ProjectsTR() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Projeler</h2>
-      <p>
-        Artan Gallery deneyimini genişleten yaklaşan ve devam eden projelerimizi
-        keşfedin.
-      </p>
+    <main className="compare">
+      <h2>Interior Projects — TR</h2>
+      <p>Yakında: Konut/otel/mağaza projeleri ve iş birliği formu.</p>
     </main>
   );
 }
