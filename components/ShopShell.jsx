@@ -2,54 +2,31 @@
 
 import React from "react";
 
-const slugify = (value) =>
-  value
-    .toString()
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-");
-
 const ShopShell = ({
   heading,
-  title,
   description,
   filterHeading,
   filters,
-  filterOptions,
   productLabel,
   productDescription,
-  comingSoonLabel,
 }) => {
-  const resolvedHeading = heading ?? title ?? "";
-  const resolvedProductLabel = productLabel ?? "Product";
-  const resolvedProductDescription = productDescription ?? comingSoonLabel ?? "";
-  const resolvedFilterHeading = filterHeading ?? "Filters";
-  const resolvedFilters =
-    filters && filters.length
-      ? filters
-      : (filterOptions || []).map((option) => ({
-          id: slugify(option),
-          label: option,
-        }));
-
   const products = Array.from({ length: 6 }, (_, index) => ({
     id: index + 1,
-    title: `${resolvedProductLabel} ${index + 1}`,
+    title: `${productLabel} ${index + 1}`,
   }));
 
   return (
     <section className="shop-shell" aria-labelledby="shop-heading">
       <header className="shop-shell__header">
-        <h1 id="shop-heading">{resolvedHeading}</h1>
+        <h1 id="shop-heading">{heading}</h1>
         {description ? <p>{description}</p> : null}
       </header>
 
       <div className="shop-shell__content">
         <aside className="shop-shell__filters" aria-labelledby="shop-filter-heading">
-          <h2 id="shop-filter-heading">{resolvedFilterHeading}</h2>
+          <h2 id="shop-filter-heading">{filterHeading}</h2>
           <ul>
-            {resolvedFilters.map((filter) => {
+            {filters.map((filter) => {
               const inputId = `shop-filter-${filter.id}`;
               return (
                 <li key={filter.id}>
@@ -67,7 +44,7 @@ const ShopShell = ({
               <div className="shop-shell__thumb" aria-hidden />
               <div className="shop-shell__card-body">
                 <h3>{product.title}</h3>
-                {resolvedProductDescription ? <p>{resolvedProductDescription}</p> : null}
+                {productDescription ? <p>{productDescription}</p> : null}
               </div>
             </article>
           ))}
