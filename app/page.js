@@ -1,6 +1,5 @@
+import { redirect } from 'next/navigation';
+
 export default function Page() {
-  if (typeof window !== 'undefined') {
-    window.location.replace('/tr');
-  }
-  return null;
+  redirect('/tr');
 }
