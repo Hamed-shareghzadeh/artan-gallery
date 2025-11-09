@@ -110,3 +110,35 @@ img{max-width:100%;display:block}
 .compareBox{margin:18px 0;border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
 .compareBox h4{margin:0 0 8px}
 .spec{font-size:14px;opacity:.9;line-height:1.7}
+/* ===== HOMEPAGE PRODUCT MARQUEE ===== */
+.marquee-wrap { padding: 32px 16px; max-width: 1200px; margin: 0 auto; }
+.marquee-head { text-align: center; font-size: clamp(18px,2.6vw,24px); margin-bottom: 14px; }
+
+.marquee-row {
+  display: flex; gap: 12px; will-change: transform;
+  animation: marquee 28s linear infinite;
+}
+.marquee-row.rtl { animation-direction: reverse; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* product mini cards */
+.mcard {
+  min-width: 240px; max-width: 240px;
+  border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff;
+}
+.mthumb { aspect-ratio: 4/3; background: linear-gradient(135deg,#f3f3f3,#ffffff); display: grid; place-items: center; }
+.mthumb span { font-size: 12px; opacity: .7; }
+.mbody { padding: 10px; }
+.mrow { display: flex; justify-content: space-between; align-items: center; }
+.mtitle { font-weight: 600; font-size: 14px; }
+.mprice { font-weight: 700; font-size: 14px; }
+.mtags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.mtag  { font-size: 11px; border:1px solid var(--line); border-radius: 999px; padding: 2px 8px; opacity: .9; }
+
+@media (max-width: 560px) {
+  .mcard { min-width: 200px; max-width: 200px; }
+}
