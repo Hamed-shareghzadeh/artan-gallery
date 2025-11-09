@@ -23,7 +23,6 @@ html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe
 
 .velvet-bg {
   position: absolute; inset: -20% -10% -10% -10%;
-  /* گرادیان‌های نرم برای حس مخمل */
   background: radial-gradient(1200px 600px at 40% 30%, rgba(212,175,55,0.25), transparent 60%),
               radial-gradient(900px 500px at 70% 70%, rgba(0,0,0,0.06), transparent 55%),
               linear-gradient(120deg, #f7f7f7 0%, #ffffff 40%, #f5f5f5 100%);
@@ -55,7 +54,6 @@ html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe
   opacity: .8; margin: 0 0 22px;
 }
 
-/* CTA ها (از قبل بود؛ کمی بهترش کردیم) */
 .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn { 
   padding: 10px 18px; border: 1px solid #111; border-radius: 999px; 
@@ -65,12 +63,10 @@ html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe
 }
 .btn:hover { transform: translateY(-1px); background: #f8f8f8; box-shadow: 0 6px 18px rgba(0,0,0,.06); }
 
-/* علامت اسکرول پایین */
 .scroll-cue {
   position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
   font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #777;
-  animation: cue-fade 2.6s ease-in-out infinite;
-  user-select: none;
+  animation: cue-fade 2.6s ease-in-out infinite; user-select: none;
 }
 @keyframes cue-fade {
   0%,100% { opacity: .25; transform: translateX(-50%) translateY(0); }
