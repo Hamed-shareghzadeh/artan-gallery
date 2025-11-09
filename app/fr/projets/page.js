@@ -1,11 +1,8 @@
-export default function ProjetsPage() {
+export default function ProjetsFR() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">Projets</h2>
-      <p>
-        Parcourez nos projets en cours et à venir qui enrichissent l'expérience
-        Artan Gallery.
-      </p>
+    <main className="compare">
+      <h2>Projets d’intérieur — FR</h2>
+      <p>Bientôt : projets résidentiels/hôteliers/commerciaux et formulaire de collaboration.</p>
     </main>
   );
 }
