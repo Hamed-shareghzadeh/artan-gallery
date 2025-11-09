@@ -14,6 +14,5 @@ export const metadata = {
 };
 
 export default function LayoutFR({ children }) {
-  // Do not render <html> here; root layout already does.
   return children;
 }
