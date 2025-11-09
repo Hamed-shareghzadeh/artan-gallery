@@ -1,11 +1,8 @@
-export default function AIPage() {
+export default function AiEN() {
   return (
-    <main className="px-6 py-16">
-      <h2 className="text-3xl font-semibold mb-4">AI</h2>
-      <p>
-        Explore our thoughts on artificial intelligence and how it shapes the
-        future of digital art.
-      </p>
+    <main className="compare">
+      <h2>AI Room Styler — EN</h2>
+      <p>Coming soon: upload your room photo and get suggestions.</p>
     </main>
   );
 }
